@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/altitude" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mileagetrack" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/paceconvert" isTestSource="false" />
