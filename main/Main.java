@@ -16,7 +16,7 @@ public class Main {
 
         while (true) {
             System.out.println("=================================================");
-            System.out.println("\t\t\t\tWELCOME TO VO2day!!");
+            System.out.println("\t\t\t\tWELCOME TO VO2day!");
             System.out.println("=================================================");
             System.out.println("1. paceconvert");
             System.out.println("2. altitudeconversion");
