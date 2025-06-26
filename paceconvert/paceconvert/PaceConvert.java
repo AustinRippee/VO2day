@@ -29,8 +29,8 @@ public class PaceConvert {
         ));
 
         DecimalFormat df_obj = new DecimalFormat("#.##");
-        double dblTotalTime = 0.0, resultScore = 0.0, dblTimeMin, dblTimeHr, dblTimeSec, dblConvMin, dblConvSec;
-        int intConvMin;
+        double dblTotalTime = 0.0, resultScore = 0.0, dblTimeMin, dblTimeHr, dblTimeSec, dblConvHr, dblConvMin, dblConvSec;
+        int intConvMin, intConvHr;
         Scanner scanMain;
         String strInputRaceDistance, strInputRaceTime, timeHr, timeMin, timeSec, convertRace, strConvSec;
         String[] totalTime;
@@ -42,15 +42,7 @@ public class PaceConvert {
         String fileInput = scanMain.nextLine();
 
         if (fileInput.equalsIgnoreCase("y")) {
-            System.out.println("Format for the CSV file:");
-            System.out.println("==========================================");
-            System.out.println("Column A\tColumn B\tColumn C");
-            System.out.println("Distance\tTime\t\tConverted Distance");
-            System.out.println("==========================================");
-            System.out.println("Example:");
-            System.out.println("800\t\t1:53.82\t\tMile");
-            System.out.println("==========================================");
-            System.out.println("Please upload the file you would like:");
+            fileIntroPrompt();
         } else if (fileInput.equalsIgnoreCase("n")) {
             while (true) {
 
@@ -65,8 +57,7 @@ public class PaceConvert {
                 if (!raceDistances.contains(strInputRaceDistance)) {
                     System.out.println("Not a valid race distance.");
                     break;
-                }
-                else {
+                } else {
 
                     System.out.println("Enter your race time:");
                     strInputRaceTime = scanMain.nextLine();
@@ -219,61 +210,59 @@ public class PaceConvert {
                         case "100m", "100":
                             dblConvSec = 100 / (0.003439 * resultScore + 6.72526);
                             intConvMin = 0;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "150m", "150":
+                            dblConvSec = 150 / (.003768768 * resultScore + 6.486427968);
+                            intConvMin = 0;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "200m", "200":
                             dblConvSec = 200 / (0.003734 * resultScore + 6.36315);
                             intConvMin = 0;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "300m", "300":
+                            dblConvSec = 300 / (0.003970935 * resultScore + 5.620258201);
+                            intConvMin = 0;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "400m", "400":
                             dblConvSec = 400 / (0.0038105 * resultScore + 5.34719);
                             intConvMin = 0;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "600m", "600":
+                            dblConvMin = Math.round(Math.floor(600 / (0.003499 * resultScore + 4.80022) / 60));
+                            intConvMin = (int) dblConvMin;
+                            dblConvSec = ((600 / (0.003499 * resultScore + 4.80022) / 60) - intConvMin) * 60;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "800m", "800":
                             dblConvMin = Math.round(Math.floor(800 / (0.003300 * resultScore + 4.54844) / 60));
                             intConvMin = (int) dblConvMin;
                             dblConvSec = ((800 / (0.003300 * resultScore + 4.54844) / 60) - dblConvMin) * 60;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "1000m", "1000", "1,000", "1,000m", "1k", "1km":
+                            dblConvMin = Math.round(Math.floor(1000 / (0.00318746 * resultScore + 4.382052887) / 60));
+                            intConvMin = (int) dblConvMin;
+                            dblConvSec = ((1000 / (0.00318746 * resultScore + 4.382052887) / 60) - dblConvMin) * 60;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "1500m", "1500", "1,500", "1,500m", "1.5k", "1.5km":
                             dblConvMin = Math.round(Math.floor(1500 / (0.003117 * resultScore + 4.09988) / 60));
                             intConvMin = (int) dblConvMin;
                             dblConvSec = ((1500 / (0.003117 * resultScore + 4.09988) / 60) - dblConvMin) * 60;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "1600m", "1600", "1,600", "1,600m":
@@ -282,16 +271,22 @@ public class PaceConvert {
                             dblConvMin = Math.round(Math.floor(1609.34 / (0.0031062 * resultScore + 4.060811045) / 60));
                             intConvMin = (int) dblConvMin;
                             dblConvSec = ((1609.34 / (0.0031062 * resultScore + 4.060811045) / 60) - dblConvMin) * 60;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "2000m", "2000", "2,000", "2,000m":
+                            dblConvMin = Math.round(Math.floor(2000 / (0.0030444 * resultScore + 3.97139601) / 60));
+                            intConvMin = (int) dblConvMin;
+                            dblConvSec = ((2000 / (0.0030444 * resultScore + 3.97139601) / 60) - dblConvMin) * 60;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "3000m", "3000", "3,000", "3,000m":
+                            dblConvMin = Math.round(Math.floor(3000 / (0.0030147 * resultScore + 3.74703401) / 60));
+                            intConvMin = (int) dblConvMin;
+                            dblConvSec = ((3000 / (0.0030147 * resultScore + 3.74703401) / 60) - dblConvMin) * 60;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "3200m", "3200", "3,200", "3,200m":
                             break;
@@ -299,44 +294,73 @@ public class PaceConvert {
                             dblConvMin = Math.round(Math.floor(2 * 1609.34 / (0.0029949 * resultScore + 3.726724) / 60));
                             intConvMin = (int) dblConvMin;
                             dblConvSec = ((2 * 1609.34 / (0.0029949 * resultScore + 3.726724) / 60) - dblConvMin) * 60;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "5000m", "5,000m", "5000", "5,000", "5k", "5km":
                             dblConvMin = Math.round(Math.floor(5000 / (0.0029129 * resultScore + 3.602496) / 60));
                             intConvMin = (int) dblConvMin;
                             dblConvSec = ((5000 / (0.0029129 * resultScore + 3.602496) / 60) - dblConvMin) * 60;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "6000m", "6,000m", "6000", "6,000", "6k", "6km":
+                            dblConvMin = Math.round(Math.floor(6000 / (0.0029028 * resultScore + 3.5403469) / 60));
+                            intConvMin = (int) dblConvMin;
+                            dblConvSec = ((6000 / (0.0029028 * resultScore + 3.5403469) / 60) - dblConvMin) * 60;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "8000m", "8,000m", "8000", "8,000", "8k", "8km":
+                            dblConvMin = Math.round(Math.floor(8000 / (0.0028672 * resultScore + 3.4212486) / 60));
+                            intConvMin = (int) dblConvMin;
+                            dblConvSec = ((8000 / (0.0028672 * resultScore + 3.4212486) / 60) - dblConvMin) * 60;
+                            strConvSec = String.format("%05.2f", dblConvSec);
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "10000m", "10,000m", "10000", "10,000", "10k", "10km":
                             dblConvMin = Math.round(Math.floor(10000 / (0.002857 * resultScore + 3.348169) / 60));
                             intConvMin = (int) dblConvMin;
                             dblConvSec = ((10000 / (0.002857 * resultScore + 3.348169) / 60) - dblConvMin) * 60;
-                            if (Math.floor(dblConvSec / 10) > 0) {
-                                strConvSec = String.valueOf(df_obj.format(dblConvSec));
-                            } else {
-                                strConvSec = "0" + df_obj.format(dblConvSec);
-                            }
+                            strConvSec = String.format("%05.2f", dblConvSec);
                             raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvMin, strConvSec);
                             break;
                         case "10 Miles", "10mi":
+                            dblConvHr = Math.floor(16093.4 / (0.0027716 * resultScore + 3.2290278) / 3600);
+                            dblConvMin = Math.floor(((16093.4 / (0.0027716 * resultScore + 3.2290278) / 3600) - dblConvHr) * 60);
+                            dblConvSec = ((((16093.4 / (0.0027716 * resultScore + 3.2290278) / 3600) - dblConvHr) * 60) - dblConvMin) * 60;
+
+                            intConvHr = (int) dblConvHr;
+                            intConvMin = (int) dblConvMin;
+
+                            strConvSec = String.format("%05.2f", dblConvSec);
+
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvHr, intConvMin, strConvSec);
                             break;
                         case "Half Marathon", "HM", "Half", "13.1", "13.1mi", "13.1 Miles":
+                            double halfDistance = 42194.99 / 2;
+                            dblConvHr = Math.floor(halfDistance / (0.0026921 * resultScore + 3.098524) / 3600);
+                            dblConvMin = Math.floor(((halfDistance / (0.0026921 * resultScore + 3.098524) / 3600) - dblConvHr) * 60);
+                            dblConvSec = ((((halfDistance / (0.0026921 * resultScore + 3.098524) / 3600) - dblConvHr) * 60) - dblConvMin) * 60;
+
+                            intConvHr = (int) dblConvHr;
+                            intConvMin = (int) dblConvMin;
+
+                            strConvSec = String.format("%05.2f", dblConvSec);
+
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvHr, intConvMin, strConvSec);
                             break;
                         case "Marathon", "M", "Full Marathon", "Full", "Mara", "26.2", "26.2mi", "26.2 Miles":
+                            dblConvHr = Math.floor(42194.99 / (0.0026921 * resultScore + 3.098524) / 3600);
+                            dblConvMin = Math.floor(((42194.99 / (0.0026921 * resultScore + 3.098524) / 3600) - dblConvHr) * 60);
+                            dblConvSec = ((((42194.99 / (0.0026921 * resultScore + 3.098524) / 3600) - dblConvHr) * 60) - dblConvMin) * 60;
+
+                            intConvHr = (int) dblConvHr;
+                            intConvMin = (int) dblConvMin;
+
+                            strConvSec = String.format("%05.2f", dblConvSec);
+
+                            raceOutput(strInputRaceDistance, strInputRaceTime, convertRace, intConvHr, intConvMin, strConvSec);
                             break;
                         default:
                             System.out.println("Invalid race distance. Please try again.");
@@ -344,8 +368,7 @@ public class PaceConvert {
                 }
                 System.out.println("Enter a new distance...\n");
             }
-        }
-        else {
+        } else {
             System.out.println("That is an invalid option. Please try again.");
         }
     }
@@ -356,10 +379,20 @@ public class PaceConvert {
         System.out.println("Score: " + resultScore);
     }
 
-    static void raceOutput(String inputRaceDistance, String strInputRaceTime, String convertRace, int comp_m_int, String comp_m_s_s) {
+    static void raceOutput(String inputRaceDistance, String strInputRaceTime, String convertRace, int comp_m_int, String comp_s_s) {
         System.out.println("=======================================================================");
         System.out.println();
-        System.out.println("Converted Time from " + inputRaceDistance + " (" + strInputRaceTime + ") to " + convertRace + ": " + comp_m_int + ":" + comp_m_s_s);
+        System.out.println("Converted Time from " + inputRaceDistance + " (" + strInputRaceTime + ") to " + convertRace + ": "
+                + String.format("%02d", comp_m_int) + ":" + comp_s_s);
+        System.out.println();
+        System.out.println("=======================================================================");
+    }
+
+    static void raceOutput(String inputRaceDistance, String strInputRaceTime, String convertRace, int comp_h_int, int comp_m_int, String comp_s_s) {
+        System.out.println("=======================================================================");
+        System.out.println();
+        System.out.println("Converted Time from " + inputRaceDistance + " (" + strInputRaceTime + ") to " + convertRace + ": "
+                + comp_h_int + ":" + String.format("%02d", comp_m_int) + ":" + comp_s_s);
         System.out.println();
         System.out.println("=======================================================================");
     }
@@ -371,5 +404,17 @@ public class PaceConvert {
         System.out.println("\t\tWritten by: Austin Rippee");
         System.out.println("\t\t\t\t******");
         System.out.println("========================================");
+    }
+
+    static void fileIntroPrompt(){
+        System.out.println("Format for the CSV file:");
+        System.out.println("==========================================");
+        System.out.println("Column A\tColumn B\tColumn C");
+        System.out.println("Distance\tTime\t\tConverted Distance");
+        System.out.println("==========================================");
+        System.out.println("Example:");
+        System.out.println("800\t\t1:53.82\t\tMile");
+        System.out.println("==========================================");
+        System.out.println("Please upload the file you would like:");
     }
 }
