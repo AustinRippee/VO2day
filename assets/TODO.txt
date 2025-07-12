@@ -1,0 +1,12 @@
+Possible features (Vo2sDay):
+=======================================================
+Cut out after first prompt only if distance isn't valid (keep app running to prompt user for valid distance)
+- same for time
+-------------------------------------------------------
+Add in pace per mile for distances above the mile
+-------------------------------------------------------
+Add wind conversions for short races + jumps - https://jmureika.lmu.build/track/ OR https://jmureika.lmu.build/track/wind/index.html
+	https://jeffchen.dev/projects/track/wind-correction/
+-------------------------------------------------------
+Track size conversions - https://ncaaorg.s3.amazonaws.com/championships/sports/crosstrack/common/XTF_FacilityIndexingConversionSummary.pdf
+-------------------------------------------------------
