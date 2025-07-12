@@ -185,7 +185,7 @@ public class PaceConvert {
                 break;
             case "1600m", "1600", "1,600", "1,600m", "1.6k", "1.6km":
                 //            v this value is probably wrong
-                resultScore = 321.7731201 * (1600 / dblTotalTime) - 1306.285127;
+                resultScore = 321.7731201 * (1600 / dblTotalTime) - 1306.325127;
                 printInfo(strInputRaceTime, strInputRaceDistance, resultScore);
                 break;
             case "1 Mile", "1Mile", "Mile", "One Mile", "1609", "1609m", "1 mile", "1mile", "1mi", "mile",
