@@ -23,17 +23,17 @@ public class PaceConvert {
         raceDistances.put("1000m", Arrays.asList("1000m", "1000", "1,000", "1,000m", "1k", "1km"));
         raceDistances.put("1500m", Arrays.asList("1500m", "1500", "1,500", "1,500m", "1.5k", "1.5km"));
         raceDistances.put("1600m", Arrays.asList("1600m", "1600", "1,600", "1,600m", "1.6k", "1.6km"));
-        raceDistances.put("1 Mile", Arrays.asList("1 Mile", "1Mile", "Mile", "One Mile", "1609", "1609m", "1 mile", "1mile", "one mile", "One mile", "one Mile"));
+        raceDistances.put("1mi", Arrays.asList("1 Mile", "1Mile", "Mile", "One Mile", "1609", "1609m", "1 mile", "1mile", "one mile", "One mile", "one Mile"));
         raceDistances.put("2000m", Arrays.asList("2000m", "2000", "2,000", "2,000m"));
         raceDistances.put("3000m", Arrays.asList("3000m", "3000", "3,000", "3,000m", "3k"));
         raceDistances.put("3200m", Arrays.asList("3200m", "3200", "3,200", "3,200m"));
-        raceDistances.put("2 Miles", Arrays.asList("2mi", "2 Mile", "2 Miles", "2Mile", "2Miles", "Two Miles", "Two Mile", "3218", "3218m"));
+        raceDistances.put("2mi", Arrays.asList("2mi", "2 Mile", "2 Miles", "2Mile", "2Miles", "Two Miles", "Two Mile", "3218", "3218m"));
         raceDistances.put("5000m", Arrays.asList("5000m", "5,000m", "5000", "5,000", "5k", "5km"));
         raceDistances.put("6000m", Arrays.asList("6000m", "6,000m", "6000", "6,000", "6k", "6km"));
         raceDistances.put("8000m", Arrays.asList("8000m", "8,000m", "8000", "8,000", "8k", "8km"));
         raceDistances.put("10000m", Arrays.asList("10000m", "10,000m", "10000", "10,000", "10k", "10km"));
-        raceDistances.put("10 Miles", Arrays.asList("10 Miles", "10mi"));
-        raceDistances.put("Half Marathon", Arrays.asList("Half Marathon", "HM", "Half", "13.1", "13.1mi", "13.1 Miles"));
+        raceDistances.put("10mi", Arrays.asList("10 Miles", "10mi"));
+        raceDistances.put("HalfM", Arrays.asList("Half Marathon", "HM", "Half", "13.1", "13.1mi", "13.1 Miles"));
         raceDistances.put("Marathon", Arrays.asList("Marathon", "M", "Full Marathon", "Full", "Mara", "26.2", "26.2mi", "26.2 Miles"));
 
         //DecimalFormat df_obj = new DecimalFormat("#.##");
@@ -49,78 +49,77 @@ public class PaceConvert {
         String fileInput = scanMain.nextLine();
 
         if (fileInput.equalsIgnoreCase("y")) {
-            fileIntroPrompt();
+            while (true) {
+                fileIntroPrompt();
 
-            System.out.println("Please enter a filename:");
-            String inputFile = scanMain.nextLine();
-            File inputFilePath = new File("C:\\Users\\Austin Rippee\\VO2day\\assets\\" + inputFile);
+                System.out.println("Please enter a filename:");
+                String inputFile = scanMain.nextLine();
+                File inputFilePath = new File("C:\\Users\\Austin Rippee\\Vo2sDay\\assets\\" + inputFile);
 
-            try {
-                Scanner scanner = new Scanner(inputFilePath);
-                if (scanner.hasNextLine()) {
-                    String line = scanner.nextLine();
-                    String[] values = line.split(",");
-                    scanner.close();
-                    strInputRaceDistance = values[0];
-                    strInputRaceTime = values[1];
-                    convertRace = values[2];
+                try {
+                    Scanner scanner = new Scanner(inputFilePath);
+                    if (scanner.hasNextLine()) {
+                        String line = scanner.nextLine();
+                        String[] values = line.split(",");
+                        scanner.close();
+                        strInputRaceDistance = values[0];
+                        strInputRaceTime = values[1];
+                        convertRace = values[2];
 
-                    if (!raceDistances.containsKey(strInputRaceDistance)) {
-                        System.out.println("Not a valid race distance.");
-                    } else {
-                        if (!raceDistances.containsKey(convertRace)) {
+                        if (!raceDistances.containsKey(strInputRaceDistance)) {
                             System.out.println("Not a valid race distance.");
                         } else {
+                            if (!raceDistances.containsKey(convertRace)) {
+                                System.out.println("Not a valid race distance.");
+                            } else {
 
-                            if (strInputRaceTime.contains(":")) {
-                                totalTime = strInputRaceTime.split(":");
+                                if (strInputRaceTime.contains(":")) {
+                                    totalTime = strInputRaceTime.split(":");
 
-                                try {
+                                    try {
 
-                                    if (totalTime.length == 3) {
-                                        timeHr = totalTime[0];
-                                        timeMin = totalTime[1];
-                                        timeSec = totalTime[2];
+                                        if (totalTime.length == 3) {
+                                            timeHr = totalTime[0];
+                                            timeMin = totalTime[1];
+                                            timeSec = totalTime[2];
 
-                                        dblTimeHr = Double.parseDouble(timeHr);
-                                        dblTimeMin = Double.parseDouble(timeMin);
-                                        dblTimeSec = Double.parseDouble(timeSec);
+                                            dblTimeHr = Double.parseDouble(timeHr);
+                                            dblTimeMin = Double.parseDouble(timeMin);
+                                            dblTimeSec = Double.parseDouble(timeSec);
 
-                                        dblTotalTime = (dblTimeHr * 3600) + (dblTimeMin * 60) + dblTimeSec;
-                                    } else if (totalTime.length == 2) {
-                                        timeMin = totalTime[0];
-                                        timeSec = totalTime[1];
+                                            dblTotalTime = (dblTimeHr * 3600) + (dblTimeMin * 60) + dblTimeSec;
+                                        } else if (totalTime.length == 2) {
+                                            timeMin = totalTime[0];
+                                            timeSec = totalTime[1];
 
-                                        dblTimeMin = Double.parseDouble(timeMin);
-                                        dblTimeSec = Double.parseDouble(timeSec);
+                                            dblTimeMin = Double.parseDouble(timeMin);
+                                            dblTimeSec = Double.parseDouble(timeSec);
 
-                                        dblTotalTime = (dblTimeMin * 60) + dblTimeSec;
-                                    } else {
+                                            dblTotalTime = (dblTimeMin * 60) + dblTimeSec;
+                                        } else {
+                                            System.out.println("Invalid time format. Try HH:MM:SS");
+                                        }
+                                    } catch (NumberFormatException e) {
                                         System.out.println("Invalid time format. Try HH:MM:SS");
                                     }
-                                } catch (NumberFormatException e) {
-                                    System.out.println("Invalid time format. Try HH:MM:SS");
+                                } else {
+                                    try {
+                                        dblTotalTime = Double.parseDouble(strInputRaceTime);
+                                    } catch (NumberFormatException e) {
+                                        System.out.println("Invalid time format. Try HH:MM:SS");
+                                    }
                                 }
-                            } else {
-                                try {
-                                    dblTotalTime = Double.parseDouble(strInputRaceTime);
-                                } catch (NumberFormatException e) {
-                                    System.out.println("Invalid time format. Try HH:MM:SS");
-                                }
+                                calcPrint(strInputRaceDistance, strInputRaceTime, dblTotalTime);
+                                convCalcPrint(strInputRaceDistance, strInputRaceTime, convertRace, resultScore);
                             }
-                            calcPrint(strInputRaceDistance, strInputRaceTime, dblTotalTime);
-                            convCalcPrint(strInputRaceDistance, strInputRaceTime, convertRace, resultScore);
                         }
+                    } else {
+                        System.out.println("CSV file is empty.");
                     }
-                    System.out.println("Enter a new distance...\n");
+                } catch (FileNotFoundException e) {
+                    System.err.println("CSV file not found: " + e.getMessage());
                 }
-                else {
-                    System.out.println("CSV file is empty.");
-                }
-            } catch (FileNotFoundException e) {
-                System.err.println("CSV file not found: " + e.getMessage());
             }
-
         } else if (fileInput.equalsIgnoreCase("n")) {
             while (true) {
                 System.out.println("==================================");
@@ -137,14 +136,24 @@ public class PaceConvert {
                 else if (strInputRaceDistance.equalsIgnoreCase("races")){
                     System.out.println("==================================");
                     StringBuilder sb = new StringBuilder();
+
+                    int count = 0;
+
                     for (String key : raceDistances.keySet()) {
                         sb.append(key).append(", ");
-                    }
-                    if (sb.length() >= 2) {
-                        sb.setLength(sb.length() - 2);
+                        count++;
+
+                        if (count % 6 == 0) {
+                            sb.setLength(sb.length() - 2);
+                            sb.append("\n");
+                        }
                     }
 
-                    System.out.println(sb.toString());
+                    if (count % 6 != 0) {
+                        sb.setLength(sb.length() - 2); // remove last ", "
+                    }
+
+                    System.out.println(sb);
                     System.out.println("==================================");
                     System.out.println();
                     continue;
@@ -221,12 +230,10 @@ public class PaceConvert {
     }
 
     static void fileIntroPrompt() {
-        System.out.println("Format for the CSV file:");
+        System.out.println("Format for CSV file:");
         System.out.println("==========================================");
         System.out.println("Column A\tColumn B\tColumn C");
         System.out.println("Distance\tTime\t\tConverted Distance");
-        System.out.println("==========================================");
-        System.out.println("Example:");
         System.out.println("800m\t\t1:53.82\t\t1 Mile");
         System.out.println("==========================================");
         //System.out.println("Please upload the file you would like:");
@@ -383,7 +390,7 @@ public class PaceConvert {
                 System.out.println("========================");
                 break;
             case "Half Marathon", "HM", "Half", "13.1", "13.1mi", "13.1 Miles":
-                resultScore = 366.3739581 * (42194.99 / 2 / dblTotalTime) - 1168.783894;
+                resultScore = 366.3739581 * ((42194.99 / 2) / dblTotalTime) - 1168.783894;
                 System.out.println("========================");
                 System.out.println("Distance Entered: " + strInputRaceDistance);
                 System.out.println("Time Entered: " + strInputRaceTime);
@@ -472,7 +479,7 @@ public class PaceConvert {
                 break;
             case "1600m", "1600", "1,600", "1,600m":
                 break;
-            case "1 Mile", "1Mile", "Mile", "One Mile", "1609", "1609m":
+            case "1mi", "1 Mile", "1Mile", "Mile", "One Mile", "1609", "1609m":
                 dblConvMin = Math.round(Math.floor(1609.34 / (0.0031062 * resultScore + 4.060811045) / 60));
                 intConvMin = (int) dblConvMin;
                 dblConvSec = ((1609.34 / (0.0031062 * resultScore + 4.060811045) / 60) - dblConvMin) * 60;
