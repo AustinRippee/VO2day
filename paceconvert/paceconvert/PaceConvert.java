@@ -1,17 +1,9 @@
 package paceconvert;
 
 //import java.text.DecimalFormat;
-
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.util.*;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.io.FileNotFoundException;
-import java.nio.file.AccessDeniedException;
-//import javax.sound.midi.SysexMessage;
-//import javax.swing.JFileChooser;
 
 public class PaceConvert {
 
@@ -47,7 +39,7 @@ public class PaceConvert {
         //DecimalFormat df_obj = new DecimalFormat("#.##");
         double dblTotalTime = 0.0, dblTimeMin, dblTimeHr, dblTimeSec;
         Scanner scanMain;
-        String strInputRaceDistance, strInputRaceTime, timeHr, timeMin, timeSec, convertRace = "";
+        String strInputRaceDistance, strInputRaceTime, timeHr, timeMin, timeSec, convertRace;
         String[] totalTime;
         scanMain = new Scanner(System.in);
 
@@ -128,7 +120,7 @@ public class PaceConvert {
             } catch (FileNotFoundException e) {
                 System.err.println("CSV file not found: " + e.getMessage());
             }
-//============================================================================================================================================================
+
         } else if (fileInput.equalsIgnoreCase("n")) {
             while (true) {
                 System.out.println("==================================");
