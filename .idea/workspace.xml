@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Random commit" />
+    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="# This is a combination of 3 commits.&#10;# This is the 1st commit message:&#10;&#10;Update README.md&#10;# This is the commit message #2:&#10;&#10;Random commit&#10;&#10;# This is the commit message #3:&#10;&#10;Random commit&#10;&#10;Random commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/SampleInputFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/SampleInputFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/SampleInputFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/SampleInputFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +53,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Austin Rippee/Vo2sDay&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="" />
