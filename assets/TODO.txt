@@ -1,22 +1,27 @@
 =======================================================
-Possible features (Vo2sDay):
+
+Bugs:
+
 =======================================================
-Cut out after second prompt if time isn't valid (keep app running to prompt user for valid time)
+- Cut out after second prompt if time isn't valid (keep app running to prompt user for valid time)
+- Fix time format based on the distance that was entered
+-------------------------------------------------------
+Allow for case-insensitive race distances for the input
+=======================================================
+
+Features:
+
+=======================================================
+- On file upload, add prompt to either export to CSV for the conversions, or in line for each one
+- Add way for file to be uploaded with multiple conversions (multiple lines) and they all print in line
 -------------------------------------------------------
 Add in pace per mile for distances above the mile
 -------------------------------------------------------
-Allow for case-insensitive race distances for the input
--------------------------------------------------------
-Fix time format based on the distance that was entered
--------------------------------------------------------
-Add in more events: 50m, 55m, 60m, 500m, 1200m, 2400, 4000m, 15000m
-Add hurdles conversions: 60mH, 100mH, 110mH, 180yH, 200yH, 200mH, 300mH, 400mH
--------------------------------------------------------
-Finalize 1600m and 3200m conversion
--------------------------------------------------------
-Add in field event conversions from metric to imperial and vice versa
--------------------------------------------------------
-Add in women's distance conversions
+- Add in more events: 50m, 55m, 60m, 500m, 1200m, 2400, 4000m, 15000m
+- Add hurdles conversions: 60mH, 100mH, 110mH, 180yH, 200yH, 200mH, 300mH, 400mH
+- Add in field event conversions from metric to imperial and vice versa
+- Add in women's distance conversions
+- Finalize 1600m and 3200m conversion
 =======================================================
 
 MAIN FEATURE CHECKLIST:
@@ -26,6 +31,7 @@ MAIN FEATURE CHECKLIST:
   - https://www.ustfccca.org/assets/track-event-conversions-standardized.pdf
   - https://worldathletics.org/about-iaaf/documents/technical-information
 > Altitude Converter
+> Pace Calculator
 > Training Paces using VDOT Chart
   - might have to implement a database (SQLite?) for this for the standards set from the chart
 > Training Suggestions

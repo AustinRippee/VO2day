@@ -163,54 +163,66 @@ public class PaceConvert {
                     System.out.println("Not a valid race distance.");
                 } else {
 
+                    while (true) {
+
                     System.out.println("Enter your race time:");
                     strInputRaceTime = scanMain.nextLine();
 
-
-                    System.out.println("Enter the race you want to convert to:");
-                    convertRace = scanMain.nextLine();
-                    if (!raceDistances.containsKey(convertRace)) {
-                        System.out.println("Not a valid race distance.");
-                    } else {
-
-                        if (strInputRaceTime.contains(":")) {
-                            totalTime = strInputRaceTime.split(":");
-
-                            try {
-
-                                if (totalTime.length == 3) {
-                                    timeHr = totalTime[0];
-                                    timeMin = totalTime[1];
-                                    timeSec = totalTime[2];
-
-                                    dblTimeHr = Double.parseDouble(timeHr);
-                                    dblTimeMin = Double.parseDouble(timeMin);
-                                    dblTimeSec = Double.parseDouble(timeSec);
-
-                                    dblTotalTime = (dblTimeHr * 3600) + (dblTimeMin * 60) + dblTimeSec;
-                                } else if (totalTime.length == 2) {
-                                    timeMin = totalTime[0];
-                                    timeSec = totalTime[1];
-
-                                    dblTimeMin = Double.parseDouble(timeMin);
-                                    dblTimeSec = Double.parseDouble(timeSec);
-
-                                    dblTotalTime = (dblTimeMin * 60) + dblTimeSec;
-                                } else {
-                                    System.out.println("Invalid time format. Try HH:MM:SS");
-                                }
-                            } catch (NumberFormatException e) {
-                                System.out.println("Invalid time format. Try HH:MM:SS");
-                            }
+                    while (true) {
+                        System.out.println("Enter the race you want to convert to:");
+                        convertRace = scanMain.nextLine();
+                        if (!raceDistances.containsKey(convertRace)) {
+                            System.out.println("Not a valid race distance.");
                         } else {
-                            try {
-                                dblTotalTime = Double.parseDouble(strInputRaceTime);
-                            } catch (NumberFormatException e) {
-                                System.out.println("Invalid time format. Try HH:MM:SS");
+
+                            boolean isValidTime = true;
+
+                            if (strInputRaceTime.contains(":")) {
+                                totalTime = strInputRaceTime.split(":");
+
+                                try {
+
+                                    if (totalTime.length == 3) {
+                                        timeHr = totalTime[0];
+                                        timeMin = totalTime[1];
+                                        timeSec = totalTime[2];
+
+                                        dblTimeHr = Double.parseDouble(timeHr);
+                                        dblTimeMin = Double.parseDouble(timeMin);
+                                        dblTimeSec = Double.parseDouble(timeSec);
+
+                                        dblTotalTime = (dblTimeHr * 3600) + (dblTimeMin * 60) + dblTimeSec;
+                                    } else if (totalTime.length == 2) {
+                                        timeMin = totalTime[0];
+                                        timeSec = totalTime[1];
+
+                                        dblTimeMin = Double.parseDouble(timeMin);
+                                        dblTimeSec = Double.parseDouble(timeSec);
+
+                                        dblTotalTime = (dblTimeMin * 60) + dblTimeSec;
+                                    } else {
+                                        System.out.println("Invalid time format. Try HH:MM:SS");
+                                        isValidTime = false;
+                                    }
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Invalid time format. Try HH:MM:SS");
+                                    isValidTime = false;
+                                }
+                            } else {
+                                try {
+                                    dblTotalTime = Double.parseDouble(strInputRaceTime);
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Invalid time format. Try HH:MM:SS");
+                                    isValidTime = false;
+                                }
+                            }
+
+                            if (isValidTime) {
+                                calcPrint(strInputRaceDistance, strInputRaceTime, dblTotalTime);
+                                convCalcPrint(strInputRaceDistance, strInputRaceTime, convertRace, resultScore);
                             }
                         }
-                        calcPrint(strInputRaceDistance, strInputRaceTime, dblTotalTime);
-                        convCalcPrint(strInputRaceDistance, strInputRaceTime, convertRace, resultScore);
+                    }
                     }
                 }
                 System.out.println("Enter a new distance...\n");
