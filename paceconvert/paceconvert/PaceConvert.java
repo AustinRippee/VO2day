@@ -68,6 +68,7 @@ public class PaceConvert {
                         }
 
                         String[] values = line.split(",");
+
                         if (values.length < 3) {
                             System.out.println("Invalid line (must contain 3 values): " + line);
                             continue;

@@ -4,18 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="# This is a combination of 3 commits.&#10;# This is the 1st commit message:&#10;&#10;Update README.md&#10;# This is the commit message #2:&#10;&#10;Random commit&#10;&#10;# This is the commit message #3:&#10;&#10;Random commit&#10;&#10;Random commit">
+    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Add multi-line file import functionality">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/altitudeconvert/altitudeconvert/AltitudeConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mileagetracker/mileagetracker/MileageTracker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pacecalculator/pacecalculator/PaceCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/perfranking/perfranking/PerfRanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/splitadder/splitadder/SplitAdder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trackconvert/trackconvert/TrackConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainingpaces/trainingpaces/TrainingPaces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainingsuggestions/trainingsuggestions/TrainingSuggestions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windconvert/windconvert/WindConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/SampleInputFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/SampleInputFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vo2sDay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vo2sDay.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/altitude/altitudeconversion/altitudeconversion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mileagetrack/mileagetrack/mileagetrack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/SampleInputFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/SampleInputFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/Vo2sDay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/Vo2sDay.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranking/perfranking/perfranking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/splitadd/splitadd/splitadd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainingpaces/trainingpaces/trainingpaces.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainingsuggestions/trainsuggest/trainsuggest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,24 +67,39 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="30HAAFy2LDfkmrDDGICuUmdRpdF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PaceConvert.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Austin Rippee/Vo2sDay&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.PaceConvert.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/Austin Rippee/Vo2sDay/main",
+    "last_opened_file_path": "C:/Users/Austin Rippee/Vo2sDay",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Austin Rippee\Vo2sDay\altitudeconvert" />
+      <recent name="C:\Users\Austin Rippee\Vo2sDay" />
+      <recent name="C:\Users\Austin Rippee\Vo2sDay\windconvert" />
+      <recent name="C:\Users\Austin Rippee\Vo2sDay\trackconvert" />
+      <recent name="C:\Users\Austin Rippee\Vo2sDay\splitadder" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -98,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753481373046</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add multi-line file import functionality">
+      <option name="closed" value="true" />
+      <created>1753483732247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753483732247</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -106,6 +160,7 @@
     <MESSAGE value="Added continuous input file, fixed HM bug, reformatted races block" />
     <MESSAGE value="Fixed program cutting out after wrong input" />
     <MESSAGE value="Random commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Random commit" />
+    <MESSAGE value="Add multi-line file import functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add multi-line file import functionality" />
   </component>
 </project>

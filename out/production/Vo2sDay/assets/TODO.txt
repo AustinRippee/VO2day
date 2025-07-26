@@ -13,7 +13,6 @@ Features:
 
 =======================================================
 - On file upload, add prompt to either export to CSV for the conversions, or in line for each one
-- Add way for file to be uploaded with multiple conversions (multiple lines) and they all print in line
 -------------------------------------------------------
 Add in pace per mile for distances above the mile
 -------------------------------------------------------

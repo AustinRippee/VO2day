@@ -5,12 +5,12 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/altitude" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/mileagetrack" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/paceconvert" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ranking" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/splitadd" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/trainingpaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/trainingsuggestions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mileagetracker" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
