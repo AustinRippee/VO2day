@@ -12,11 +12,11 @@ Allow for case-insensitive race distances for the input
 Features:
 
 =======================================================
-- On file upload, add prompt to either export to CSV for the conversions, or in line for each one
+- On file upload, add prompt to either export to CSV with conversions on 4th column or in line for each one
 -------------------------------------------------------
 Add in pace per mile for distances above the mile
 -------------------------------------------------------
-- Add in more events: 50m, 55m, 60m, 500m, 1200m, 2400, 4000m, 15000m
+- Add in more events: 50m, 55m, 60m, 500m, 1200m, 2400m, 4000m, 15000m
 - Add hurdles conversions: 60mH, 100mH, 110mH, 180yH, 200yH, 200mH, 300mH, 400mH
 - Add in field event conversions from metric to imperial and vice versa
 - Add in women's distance conversions
@@ -26,15 +26,18 @@ Add in pace per mile for distances above the mile
 MAIN FEATURE CHECKLIST:
 
 =======================================================
-> Race time converter - https://www.milesplit.com/calc
+> Race time converter
+  - https://www.milesplit.com/calc
   - https://www.ustfccca.org/assets/track-event-conversions-standardized.pdf
   - https://worldathletics.org/about-iaaf/documents/technical-information
 > Altitude Converter
 > Pace Calculator
-> Training Paces using VDOT Chart
+  - https://www.active.com/fitness/calculators/pace
+> Training Paces using VDOT Chart - https://www.coacheseducation.com/endur/jack-daniels-nov-00.php
   - might have to implement a database (SQLite?) for this for the standards set from the chart
 > Training Suggestions
 > Stopwatch + Split Adder
+  - https://www.grun1.com/utils/timeCalc.html
 > Mileage Tracker
 > Performance Ranking
 > Track size conversions

@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Add multi-line file import functionality">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Complete file re-structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vo2sDay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vo2sDay.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/altitude/altitudeconversion/altitudeconversion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mileagetrack/mileagetrack/mileagetrack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/SampleInputFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/SampleInputFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/Vo2sDay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/Vo2sDay.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/SampleInputFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/SampleInputFile.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranking/perfranking/perfranking.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/splitadd/splitadd/splitadd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainingpaces/trainingpaces/trainingpaces.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainingsuggestions/trainsuggest/trainsuggest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +46,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="30HAAFy2LDfkmrDDGICuUmdRpdF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,14 +57,22 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.PaceConvert.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_directory_selection": "C:/Users/Austin Rippee/Vo2sDay/splitadder/src",
-    "last_opened_file_path": "C:/Users/Austin Rippee/Vo2sDay"
+    "last_directory_selection": "C:/Users/Austin Rippee/Vo2sDay/main",
+    "last_opened_file_path": "C:/Users/Austin Rippee/Vo2sDay",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -134,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753483732247</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Complete file re-structure">
+      <option name="closed" value="true" />
+      <created>1753492832520</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1753492832520</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -143,6 +152,7 @@
     <MESSAGE value="Fixed program cutting out after wrong input" />
     <MESSAGE value="Random commit" />
     <MESSAGE value="Add multi-line file import functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add multi-line file import functionality" />
+    <MESSAGE value="Complete file re-structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete file re-structure" />
   </component>
 </project>

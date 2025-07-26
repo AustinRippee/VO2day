@@ -3,16 +3,21 @@
 Bugs:
 
 =======================================================
-- Cut out after second prompt if time isn't valid (keep app running to prompt user for valid time)
+- Time prompt isn't being recalled if time is wrongly entered. It goes to convertRace prompt.
 - Fix time format based on the distance that was entered
+    - HH:MM:SS.mm is including all leading zeros
 -------------------------------------------------------
 Allow for case-insensitive race distances for the input
+    - 1600m vs 1600M or 1mi vs 1MI
 =======================================================
 
 Features:
 
 =======================================================
-- On file upload, add prompt to either export to CSV with conversions on 4th column or in line for each one
+- On file upload, add prompt to user asking:
+    - export to CSV with conversions on 4th column
+    OR
+    - in line for each one (already have this implemented)
 -------------------------------------------------------
 Add in pace per mile for distances above the mile
 -------------------------------------------------------
