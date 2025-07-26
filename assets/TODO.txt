@@ -14,6 +14,9 @@ Allow for case-insensitive race distances for the input
 Features:
 
 =======================================================
+Maybe use Main.Java as a way to input whatever performance from the user and then utilize the
+navigation functionality to direct the user to the appropriate function and take that input
+-------------------------------------------------------
 - On file upload, add prompt to user asking:
     - export to CSV with conversions on 4th column
     OR
