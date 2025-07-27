@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Initialized database connection">
+    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Started TrackConvert, created database for conversion rates, remove 2 while loops in PaceConvert logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/database/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydatabase.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/mydatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trackconvert/trackconvert/TrackConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/trackconvert/trackconvert/TrackConvert.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +52,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.PaceConvert.executor": "Run",
+    "Application.RunMain.executor": "Debug",
     "Application.TrackConvert.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -87,6 +83,16 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RunMain" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Vo2sDay" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -160,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753569955109</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Started TrackConvert, created database for conversion rates, remove 2 while loops in PaceConvert logic">
+      <option name="closed" value="true" />
+      <created>1753584113441</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1753584113441</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,6 +186,7 @@
     <MESSAGE value="Complete file re-structure" />
     <MESSAGE value="Split PaceConvert into multiple files. Changed TODO and Sample.csv" />
     <MESSAGE value="Initialized database connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialized database connection" />
+    <MESSAGE value="Started TrackConvert, created database for conversion rates, remove 2 while loops in PaceConvert logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started TrackConvert, created database for conversion rates, remove 2 while loops in PaceConvert logic" />
   </component>
 </project>
