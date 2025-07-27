@@ -4,6 +4,10 @@ Bugs:
 
 =======================================================
 - Time prompt isn't being recalled if time is wrongly entered. It goes to convertRace prompt.
+- Prompts need to be fixed under the while loops when entering manually.
+    - After going through one whole conversion, it goes back to whatever that while loop is
+    before. I need to find a way to break out of the while loop if the conversion is successful.
+    Otherwise, continue going through the while loop until a successful input has been added.
 - Fix time format based on the distance that was entered
     - HH:MM:SS.mm is including all leading zeros
 -------------------------------------------------------

@@ -171,12 +171,12 @@ public class PaceConvert {
                     System.out.println("Not a valid race distance.");
                 } else {
 
-                    while (true) {
+                    //while (true) {
 
                         System.out.println("Enter your race time:");
                         strInputRaceTime = scanMain.nextLine();
 
-                        while (true) {
+                        //while (true) {
 
                             System.out.println("Enter the race you want to convert to:");
                             convertRace = scanMain.nextLine();
@@ -235,8 +235,8 @@ public class PaceConvert {
                                     Calculations.convCalcPrint(strInputRaceDistance, strInputRaceTime, convertRace, resultScore);
                                 }
                             }
-                        }
-                    }
+                        //}
+                    //}
                 }
                 System.out.println("Enter a new distance...\n");
             }

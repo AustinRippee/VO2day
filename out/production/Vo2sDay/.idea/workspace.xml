@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Split PaceConvert into multiple files. Changed TODO and Sample.csv">
-      <change afterPath="$PROJECT_DIR$/database/database/DBConnector.java" afterDir="false" />
+    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Initialized database connection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vo2sDay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vo2sDay.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/database/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydatabase.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753496395207</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initialized database connection">
+      <option name="closed" value="true" />
+      <created>1753569955109</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753569955109</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,6 +164,7 @@
     <MESSAGE value="Add multi-line file import functionality" />
     <MESSAGE value="Complete file re-structure" />
     <MESSAGE value="Split PaceConvert into multiple files. Changed TODO and Sample.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split PaceConvert into multiple files. Changed TODO and Sample.csv" />
+    <MESSAGE value="Initialized database connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialized database connection" />
   </component>
 </project>
