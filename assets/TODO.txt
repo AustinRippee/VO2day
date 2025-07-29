@@ -9,8 +9,6 @@ Bugs:
     before. I need to find a way to break out of the while loop if the conversion is successful.
     Otherwise, continue going through the while loop until a successful input has been added.
 -------------------------------------------------------
-- Fix connection to database that outputs actually table contents
--------------------------------------------------------
 - Fix time format based on the distance that was entered
     - HH:MM:SS.mm is including all leading zeros
 -------------------------------------------------------
