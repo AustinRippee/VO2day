@@ -8,10 +8,13 @@ Bugs:
     - After going through one whole conversion, it goes back to whatever that while loop is
     before. I need to find a way to break out of the while loop if the conversion is successful.
     Otherwise, continue going through the while loop until a successful input has been added.
+-------------------------------------------------------
+- Fix connection to database that outputs table contents
+-------------------------------------------------------
 - Fix time format based on the distance that was entered
     - HH:MM:SS.mm is including all leading zeros
 -------------------------------------------------------
-Allow for case-insensitive race distances for the input
+- Allow for case-insensitive race distances for the input
     - 1600m vs 1600M or 1mi vs 1MI
 =======================================================
 

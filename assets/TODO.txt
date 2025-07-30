@@ -1,6 +1,6 @@
 =======================================================
 
-Bugs:
+  Bugs:
 
 =======================================================
 - Time prompt isn't being recalled if time is wrongly entered. It goes to convertRace prompt.
@@ -16,11 +16,14 @@ Bugs:
     - 1600m vs 1600M or 1mi vs 1MI
 =======================================================
 
-Features:
+  Features:
 
 =======================================================
 Maybe use Main.Java as a way to input whatever performance from the user and then utilize the
 navigation functionality to direct the user to the appropriate function and take that input
+-------------------------------------------------------
+- Add performances to a database
+    - CRUD app functionality for practice either mileagetracker OR simple run CRUD
 -------------------------------------------------------
 - On file upload, add prompt to user asking:
     - export to CSV with conversions on 4th column
@@ -36,7 +39,7 @@ Add in pace per mile for distances above the mile
 - Finalize 1600m and 3200m conversion
 =======================================================
 
-MAIN FEATURE CHECKLIST:
+  MAIN FEATURE CHECKLIST:
 
 =======================================================
 > Race time converter
@@ -59,6 +62,21 @@ MAIN FEATURE CHECKLIST:
   - https://jmureika.lmu.build/track/
   - https://jmureika.lmu.build/track/wind/index.html
   - https://jeffchen.dev/projects/track/wind-correction/
+=======================================================
+
+  FUTURE FUNCTIONALITY:
+
+=======================================================
+FrontEnd - Vue
+           or React
+REST API - Spring Boot
+           or Django/Flask
+Database - MySQL (if moving towards public online website)
+           or PostgreSQL
+           or SQLite (if still simple)
+Styling - Tailwind CSS
+Testing - JUnit
+Single-Page Application (SPA)
 -------------------------------------------------------
 https://www.coachxpro.com/
 =======================================================
