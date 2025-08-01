@@ -37,6 +37,8 @@ Add in pace per mile for distances above the mile
 - Add in field event conversions from metric to imperial and vice versa
 - Add in women's distance conversions
 - Finalize 1600m and 3200m conversion
+-------------------------------------------------------
+- Add more error handling to TrackConvert
 =======================================================
 
   MAIN FEATURE CHECKLIST:
@@ -67,16 +69,10 @@ Add in pace per mile for distances above the mile
   FUTURE FUNCTIONALITY:
 
 =======================================================
-FrontEnd - Vue
-           or React
-REST API - Spring Boot
-           or Django/Flask
-Database - MySQL (if moving towards public online website)
-           or PostgreSQL
-           or SQLite (if still simple)
-Styling - Tailwind CSS
-Testing - JUnit
-Single-Page Application (SPA)
+FrontEnd - Vue or React + Tailwind CSS (SPA)
+Backend - Spring Boot (REST API)
+Database - PostgreSQL or SQLite (local)
+Testing - JUnit + Spring Boot Test
 -------------------------------------------------------
 https://www.coachxpro.com/
 =======================================================
