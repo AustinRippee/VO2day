@@ -26,9 +26,9 @@ public class Main {
             System.out.println("1. paceconvert");
             System.out.println("2. altitudeconversion");
             System.out.println("3. trainingpaces");
-            System.out.println("4. trainsuggest");
+            System.out.println("4. trainingsuggestions");
             System.out.println("5. splitadd");
-            System.out.println("6. mileagetrack");
+            System.out.println("6. mileagetracker");
             System.out.println("7. perfranking");
             System.out.println("8. pacecalculator");
             System.out.println("9. trackconvert");
@@ -58,7 +58,7 @@ public class Main {
                 case "perfranking", "7":
                     PerfRanking.main(args);
                     break;
-                case "pacecalc", "8":
+                case "pacecalculator", "8":
                     PaceCalculator.main(args);
                     break;
                 case "trackconvert", "9":

@@ -1,5 +1,10 @@
 # Vo2sDay
-Designed to provide tools for your training. This program offers a varity of different tools to aid in your understanding of training and racing paces. 
+#### Written by Austin Rippee
+***
+# About
+Designed to provide tools for your training. This program offers a varity of different tools to aid in your understanding of training and racing paces.
+***
+# Features
 
 ```
 > Race time converter

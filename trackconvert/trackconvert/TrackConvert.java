@@ -10,7 +10,6 @@ public class TrackConvert {
         String timeHr, timeMin, timeSec, convertedTime = "";
         String[] totalTime;
         Scanner scanner = new Scanner(System.in);
-        boolean programDone = false;
 
         enum TrackConversions {
             undersized_to_flat,
