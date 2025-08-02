@@ -12,7 +12,13 @@ public class PaceConvert {
 
     public static void main(String[] args) {
 
-        Map<String, List<String>> raceDistances = new LinkedHashMap<>();
+        List<String> raceDistances = List.of(
+                "100m", "150m", "200m", "300m", "400m",
+                "600m", "800m", "1k", "1500m", "1600m", "1mi", "2k",
+                "3k", "3200m", "2mi", "5k", "6k", "8k", "10k", "10mi", "HalfMara", "Marathon"
+        );
+
+/*      Map<String, List<String>> raceDistances = new LinkedHashMap<>();
 
         raceDistances.put("100m", Arrays.asList("100m", "100"));
         raceDistances.put("150m", Arrays.asList("150m", "150"));
@@ -35,7 +41,7 @@ public class PaceConvert {
         raceDistances.put("10000m", Arrays.asList("10000m", "10,000m", "10000", "10,000", "10k", "10km"));
         raceDistances.put("10mi", Arrays.asList("10 Miles", "10mi"));
         raceDistances.put("HalfM", Arrays.asList("Half Marathon", "HM", "Half", "13.1", "13.1mi", "13.1 Miles"));
-        raceDistances.put("Marathon", Arrays.asList("Marathon", "M", "Full Marathon", "Full", "Mara", "26.2", "26.2mi", "26.2 Miles"));
+        raceDistances.put("Marathon", Arrays.asList("Marathon", "M", "Full Marathon", "Full", "Mara", "26.2", "26.2mi", "26.2 Miles"));*/
 
         //DecimalFormat df_obj = new DecimalFormat("#.##");
         double dblTotalTime = 0.0, dblTimeMin, dblTimeHr, dblTimeSec;
@@ -78,12 +84,12 @@ public class PaceConvert {
                         strInputRaceTime = values[1];
                         convertRace = values[2];
 
-                        if (!raceDistances.containsKey(strInputRaceDistance)) {
+                        if (!raceDistances.contains(strInputRaceDistance)) {
                             System.out.println("Not a valid race distance: " + strInputRaceDistance);
                             continue;
                         }
 
-                        if (!raceDistances.containsKey(convertRace)) {
+                        if (!raceDistances.contains(convertRace)) {
                             System.out.println("Not a valid conversion distance: " + convertRace);
                             continue;
                         }
@@ -143,7 +149,7 @@ public class PaceConvert {
                 } else if (strInputRaceDistance.equalsIgnoreCase("races")) {
                     System.out.println("==================================");
 
-                    StringBuilder sb = new StringBuilder();
+/*                    StringBuilder sb = new StringBuilder();
 
                     int count = 0;
 
@@ -161,13 +167,14 @@ public class PaceConvert {
                         sb.setLength(sb.length() - 2); // remove last ", "
                     }
 
-                    System.out.println(sb);
+                    System.out.println(sb);*/
+                    System.out.println(raceDistances);
                     System.out.println("==================================");
                     System.out.println();
                     continue;
                 }
 
-                if (!raceDistances.containsKey(strInputRaceDistance)) {
+                if (!raceDistances.contains(strInputRaceDistance)) {
                     System.out.println("Not a valid race distance.");
                 } else {
 
@@ -181,7 +188,7 @@ public class PaceConvert {
                             System.out.println("Enter the race you want to convert to:");
                             convertRace = scanMain.nextLine();
 
-                            if (!raceDistances.containsKey(convertRace)) {
+                            if (!raceDistances.contains(convertRace)) {
                                 System.out.println("Not a valid race distance.");
                             } else {
 

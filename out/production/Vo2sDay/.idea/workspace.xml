@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Started TrainingPaces">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Created vdot database and entered most values. Updated readme &amp; main.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trackconvert/trackconvert/TrackConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/trackconvert/trackconvert/TrackConvert.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,31 +45,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PaceConvert.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RunMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TrackConvert.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TrainingPaces.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Austin Rippee/Vo2sDay/main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Austin Rippee/Vo2sDay&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.PaceConvert.executor": "Run",
+    "Application.RunMain.executor": "Debug",
+    "Application.TrackConvert.executor": "Run",
+    "Application.TrainingPaces.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/Austin Rippee/Vo2sDay/main",
+    "last_opened_file_path": "C:/Users/Austin Rippee/Vo2sDay",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Austin Rippee\Vo2sDay\altitudeconvert" />
@@ -225,7 +220,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753930394947</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="TrackConvert control flow enhancements and logic updates. Fixed missed values in track_conversions table in db.">
+      <option name="closed" value="true" />
+      <created>1754076607455</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1754076607455</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Created vdot database and entered most values. Updated readme &amp; main.">
+      <option name="closed" value="true" />
+      <created>1754104390713</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1754104390713</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -242,6 +253,8 @@
     <MESSAGE value="Completed main logic of TrackConvert." />
     <MESSAGE value="Getting files up to date" />
     <MESSAGE value="Started TrainingPaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started TrainingPaces" />
+    <MESSAGE value="TrackConvert control flow enhancements and logic updates. Fixed missed values in track_conversions table in db." />
+    <MESSAGE value="Created vdot database and entered most values. Updated readme &amp; main." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created vdot database and entered most values. Updated readme &amp; main." />
   </component>
 </project>

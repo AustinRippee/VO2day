@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Created vdot database and entered most values. Updated readme &amp; main.">
+    <list default="true" id="556facc3-aca5-495d-889d-f484882cf8de" name="Changes" comment="Finished VDOT table. Updated TODO. Added other sample file for PaceConvert.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/assets/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vo2sDay/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vo2sDay/mydatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/paceconvert/paceconvert/PaceConvert.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754104390713</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Finished VDOT table. Updated TODO. Added other sample file for PaceConvert.">
+      <option name="closed" value="true" />
+      <created>1754163249613</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1754163249613</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -257,6 +268,7 @@
     <MESSAGE value="Started TrainingPaces" />
     <MESSAGE value="TrackConvert control flow enhancements and logic updates. Fixed missed values in track_conversions table in db." />
     <MESSAGE value="Created vdot database and entered most values. Updated readme &amp; main." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created vdot database and entered most values. Updated readme &amp; main." />
+    <MESSAGE value="Finished VDOT table. Updated TODO. Added other sample file for PaceConvert." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished VDOT table. Updated TODO. Added other sample file for PaceConvert." />
   </component>
 </project>
