@@ -51,8 +51,11 @@ Add in pace per mile for distances above the mile
 > Altitude Converter
 > Pace Calculator
   - https://www.active.com/fitness/calculators/pace
-> Training Paces using VDOT Chart - https://www.coacheseducation.com/endur/jack-daniels-nov-00.php
+> Training Paces using VDOT Chart
   - might have to implement a database (SQLite?) for this for the standards set from the chart
+  - https://www.coacheseducation.com/endur/jack-daniels-nov-00.php
+  - https://bhsxctf.com/wp-content/uploads/2018/09/VDOT-Chart.pdf
+  - https://tritrainingharder.com/blog/2013/10/run-testing-calculating-your-vdot-pace.html
 > Training Suggestions
 > Stopwatch + Split Adder
   - https://www.grun1.com/utils/timeCalc.html
