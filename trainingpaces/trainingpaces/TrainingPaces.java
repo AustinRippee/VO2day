@@ -3,69 +3,95 @@ package trainingpaces;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.util.Scanner;
 import java.sql.*;
+import java.util.Scanner;
 
 public class TrainingPaces {
+
     public static void main(String[] args) {
-        double dblTotalTime = 0.0, dblTimeMin, dblTimeHr, dblTimeSec, convertedTotalTime;
-        String timeHr, timeMin, timeSec, convertedTime = "";
+        double dblTotalTime = 0.0;
         String[] totalTime;
         Scanner scanner = new Scanner(System.in);
 
         introPrompt();
 
-        System.out.println("Please enter your most recent race distance:");
-        String raceDistance = scanner.nextLine();
-        System.out.println("Please enter your most recent race time:");
-        String raceTime = scanner.nextLine();
+        while (true) {
 
-        //use time to create the query to filter out the VDOT race table
-        //need a way to find the closest value from input race time.
-        String sqlQuery = "";
-        System.out.println("Generated SQL: " + sqlQuery);
-
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:mydatabase.db");
-            PreparedStatement printQuery = conn.prepareStatement(sqlQuery)) {
+            System.out.println("Please enter your most recent race distance (e.g., 800):");
+            String raceDistance = scanner.nextLine().trim();
+            System.out.println("Please enter your most recent race time (e.g., 1:59.75):");
+            String raceTime = scanner.nextLine().trim();
 
             if (raceTime.contains(":")) {
                 totalTime = raceTime.split(":");
-
                 if (totalTime.length == 3) {
-
-                    timeHr = totalTime[0];
-                    timeMin = totalTime[1];
-                    timeSec = totalTime[2];
-
-                    dblTimeHr = Double.parseDouble(timeHr);
-                    dblTimeMin = Double.parseDouble(timeMin);
-                    dblTimeSec = Double.parseDouble(timeSec);
-                    dblTotalTime = (dblTimeHr * 3600) + (dblTimeMin * 60) + dblTimeSec;
-
-
+                    double timeHr = Double.parseDouble(totalTime[0]);
+                    double timeMin = Double.parseDouble(totalTime[1]);
+                    double timeSec = Double.parseDouble(totalTime[2]);
+                    dblTotalTime = (timeHr * 3600) + (timeMin * 60) + timeSec;
                 } else if (totalTime.length == 2) {
-                    timeMin = totalTime[0];
-                    timeSec = totalTime[1];
-
-                    dblTimeMin = Double.parseDouble(timeMin);
-                    dblTimeSec = Double.parseDouble(timeSec);
-                    dblTotalTime = (dblTimeMin * 60) + dblTimeSec;
-
-
+                    double timeMin = Double.parseDouble(totalTime[0]);
+                    double timeSec = Double.parseDouble(totalTime[1]);
+                    dblTotalTime = (timeMin * 60) + timeSec;
                 } else {
-                    System.out.println("No matching conversion found in database.");
+                    System.out.println("Invalid time format.");
+                    return;
                 }
+            } else {
+                System.out.println("Invalid time format. Must contain ':'");
+                return;
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+
+            int foundVDOT = -1;
+
+            String sqlVDOT = "SELECT vdot, \"" + raceDistance + "\" FROM vdot_estimate ORDER BY \"" + raceDistance + "\" ASC";
+
+            try (Connection conn = DriverManager.getConnection("jdbc:sqlite:mydatabase.db");
+                 Statement stmt = conn.createStatement();
+                 ResultSet rs = stmt.executeQuery(sqlVDOT)) {
+
+                while (rs.next()) {
+                    String timeStr = rs.getString(raceDistance);
+                    double rowSeconds = convertTimeToSeconds(timeStr);
+
+                    if (rowSeconds >= dblTotalTime) {
+                        foundVDOT = rs.getInt("vdot");
+                        break;
+                    }
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            if (foundVDOT == -1) {
+                System.out.println("No matching VDOT score found.");
+                return;
+            }
+
+            System.out.println("Matched VDOT: " + foundVDOT);
+
+            String sqlPaces = "SELECT * FROM vdot_paces WHERE vdot = ?";
+
+            try (Connection conn = DriverManager.getConnection("jdbc:sqlite:mydatabase.db");
+                 PreparedStatement ps = conn.prepareStatement(sqlPaces)) {
+
+                ps.setInt(1, foundVDOT);
+
+                try (ResultSet paceRs = ps.executeQuery()) {
+                    if (paceRs.next()) {
+                        for (int col = 2; col <= paceRs.getMetaData().getColumnCount(); col++) {
+                            String colName = paceRs.getMetaData().getColumnName(col);
+                            String value = paceRs.getString(col);
+                            System.out.println(colName + ": " + value);
+                        }
+                    }
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-
-        //either have a separate query or simply join on the ID from the VDOT race table
-        //and combine to get the training paces
-
-        //print out the training paces based on that as well as the VDOT score
-
-        //BONUS: take this VDOT score and bring in comparable distances from PaceConvert
     }
 
     public static void introPrompt() {
@@ -77,4 +103,20 @@ public class TrainingPaces {
         System.out.println("========================================");
     }
 
+    private static double convertTimeToSeconds(String timeStr) {
+        if (timeStr == null || timeStr.isEmpty()) return Double.MAX_VALUE;
+        String[] parts = timeStr.split(":");
+        double totalSeconds = 0;
+        if (parts.length == 3) {
+            totalSeconds = Integer.parseInt(parts[0]) * 3600 +
+                    Integer.parseInt(parts[1]) * 60 +
+                    Double.parseDouble(parts[2]);
+        } else if (parts.length == 2) {
+            totalSeconds = Integer.parseInt(parts[0]) * 60 +
+                    Double.parseDouble(parts[1]);
+        } else {
+            totalSeconds = Double.parseDouble(parts[0]);
+        }
+        return totalSeconds;
+    }
 }
