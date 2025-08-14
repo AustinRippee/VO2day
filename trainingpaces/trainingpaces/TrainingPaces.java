@@ -43,6 +43,7 @@ public class TrainingPaces {
             }
 
             int foundVDOT = -1;
+            int lastFasterVDOT = -1;
 
             String sqlVDOT = "SELECT vdot, \"" + raceDistance + "\" FROM vdot_estimate ORDER BY \"" + raceDistance + "\" ASC";
 
@@ -54,11 +55,14 @@ public class TrainingPaces {
                     String timeStr = rs.getString(raceDistance);
                     double rowSeconds = convertTimeToSeconds(timeStr);
 
-                    if (rowSeconds >= dblTotalTime) {
-                        foundVDOT = rs.getInt("vdot");
+                    if (rowSeconds < dblTotalTime) {
+                        lastFasterVDOT  = rs.getInt("vdot");
+                    } else {
                         break;
                     }
                 }
+
+                foundVDOT = lastFasterVDOT;
 
             } catch (SQLException e) {
                 e.printStackTrace();
