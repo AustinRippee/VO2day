@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class TrainingPaces {
 
     public static void main(String[] args) {
-        double dblTotalTime = 0.0;
+        double dblTotalTime;
         String[] totalTime;
         Scanner scanner = new Scanner(System.in);
 
@@ -110,7 +110,7 @@ public class TrainingPaces {
     private static double convertTimeToSeconds(String timeStr) {
         if (timeStr == null || timeStr.isEmpty()) return Double.MAX_VALUE;
         String[] parts = timeStr.split(":");
-        double totalSeconds = 0;
+        double totalSeconds;
         if (parts.length == 3) {
             totalSeconds = Integer.parseInt(parts[0]) * 3600 +
                     Integer.parseInt(parts[1]) * 60 +

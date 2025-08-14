@@ -23,16 +23,10 @@ public class Main {
             System.out.println("\t\t\t\tWELCOME TO Vo2sDay!");
             System.out.println("\t\t\t Written by Austin Rippee");
             System.out.println("=================================================");
-            System.out.println("1. paceconvert");
-            System.out.println("2. altitudeconversion");
-            System.out.println("3. trainingpaces");
-            System.out.println("4. trainingsuggestions");
-            System.out.println("5. splitadd");
-            System.out.println("6. mileagetracker");
-            System.out.println("7. perfranking");
-            System.out.println("8. pacecalculator");
-            System.out.println("9. trackconvert");
-            System.out.println("10. windconvert");
+            System.out.println("[1] - paceconvert\t\t\t[2] - altitudeconversion\t\t[3] trainingpaces");
+            System.out.println("[4] - trainingsuggestions\t\t[5] - splitadd\t\t[6] - mileagetracker");
+            System.out.println("[7] - perfranking\t\t\t[8] - pacecalculator\t\t[9] - trackconvert");
+            System.out.println("[10] - windconvert\t\t\t[11] - TBA");
             System.out.println("Which program would you like to run? (type 'exit' to quit): ");
             input = scanner.nextLine().trim().toLowerCase();
 
@@ -68,7 +62,7 @@ public class Main {
                     WindConvert.main(args);
                     break;
                 case "exit":
-                    System.out.println("Goodbye!");
+                    System.out.println("Exiting Program...");
                     return;
                 default:
                     System.out.println("Unknown command. Try again.");

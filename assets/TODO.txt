@@ -44,29 +44,34 @@ Add in pace per mile for distances above the mile
   MAIN FEATURE CHECKLIST:
 
 =======================================================
-> Race time converter
-  - https://www.milesplit.com/calc
-  - https://www.ustfccca.org/assets/track-event-conversions-standardized.pdf
-  - https://worldathletics.org/about-iaaf/documents/technical-information
 > Altitude Converter
 > Pace Calculator
   - https://www.active.com/fitness/calculators/pace
-> Training Paces using VDOT Chart
-  - might have to implement a database (SQLite?) for this for the standards set from the chart
-  - https://www.coacheseducation.com/endur/jack-daniels-nov-00.php
-  - https://bhsxctf.com/wp-content/uploads/2018/09/VDOT-Chart.pdf
-  - https://tritrainingharder.com/blog/2013/10/run-testing-calculating-your-vdot-pace.html
 > Training Suggestions
 > Stopwatch + Split Adder
   - https://www.grun1.com/utils/timeCalc.html
 > Mileage Tracker
 > Performance Ranking
-> Track size conversions
-  - https://ncaaorg.s3.amazonaws.com/championships/sports/crosstrack/common/XTF_FacilityIndexingConversionSummary.pdf
 > Add wind conversions for short races + jumps
   - https://jmureika.lmu.build/track/
   - https://jmureika.lmu.build/track/wind/index.html
   - https://jeffchen.dev/projects/track/wind-correction/
+=======================================================
+
+  FUNCTIONALITY DONE:
+
+=======================================================
+> Race time converter
+  - https://www.milesplit.com/calc
+  - https://www.ustfccca.org/assets/track-event-conversions-standardized.pdf
+  - https://worldathletics.org/about-iaaf/documents/technical-information
+> Training Paces using VDOT Chart
+  - might have to implement a database (SQLite?) for this for the standards set from the chart
+  - https://www.coacheseducation.com/endur/jack-daniels-nov-00.php
+  - https://bhsxctf.com/wp-content/uploads/2018/09/VDOT-Chart.pdf
+  - https://tritrainingharder.com/blog/2013/10/run-testing-calculating-your-vdot-pace.html
+> Track size conversions
+   - https://ncaaorg.s3.amazonaws.com/championships/sports/crosstrack/common/XTF_FacilityIndexingConversionSummary.pdf
 =======================================================
 
   FUTURE FUNCTIONALITY:
